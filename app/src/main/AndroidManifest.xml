@@ -201,4 +201,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
     </application>
 
+    <queries>
+        <package android:name="net.tropicbliss.mathquiz" />
+    </queries>
 </manifest>

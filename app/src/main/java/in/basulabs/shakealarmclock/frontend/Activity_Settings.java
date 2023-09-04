@@ -143,16 +143,16 @@ public class Activity_Settings extends AppCompatActivity implements
 		////////////////////////////////////////////////////
 		// Initialise spinner for shake operation:
 		///////////////////////////////////////////////////
-		Spinner shakeOpSpinner = findViewById(R.id.shakeOperationSpinner);
-		ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this,
-			R.array.shakeAndPowerOptions, android.R.layout.simple_spinner_item);
-		arrayAdapter.setDropDownViewResource(
-			android.R.layout.simple_spinner_dropdown_item);
-		shakeOpSpinner.setAdapter(arrayAdapter);
-		shakeOpSpinner.setSelection(sharedPreferences.getInt(
-			ConstantsAndStatics.SHARED_PREF_KEY_DEFAULT_SHAKE_OPERATION,
-			ConstantsAndStatics.SNOOZE));
-		shakeOpSpinner.setOnItemSelectedListener(this);
+//		Spinner shakeOpSpinner = findViewById(R.id.shakeOperationSpinner);
+//		ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this,
+//			R.array.shakeAndPowerOptions, android.R.layout.simple_spinner_item);
+//		arrayAdapter.setDropDownViewResource(
+//			android.R.layout.simple_spinner_dropdown_item);
+//		shakeOpSpinner.setAdapter(arrayAdapter);
+//		shakeOpSpinner.setSelection(sharedPreferences.getInt(
+//			ConstantsAndStatics.SHARED_PREF_KEY_DEFAULT_SHAKE_OPERATION,
+//			ConstantsAndStatics.SNOOZE));
+//		shakeOpSpinner.setOnItemSelectedListener(this);
 
 		/////////////////////////////////////////////////////////
 		// Initialise spinner for power button operation:
@@ -385,7 +385,7 @@ public class Activity_Settings extends AppCompatActivity implements
 		TextView appVersionTextView = findViewById(R.id.appVersionTextView);
 		try {
 			String versionName =
-				getPackageManager().getPackageInfo(getPackageName(),0).versionName;
+				getPackageManager().getPackageInfo(getPackageName(),0).versionName + " (modified by tropicbliss)";
 			appVersionTextView.setText(versionName);
 			appVersionTextView.setVisibility(View.VISIBLE);
 		} catch (PackageManager.NameNotFoundException e) {
